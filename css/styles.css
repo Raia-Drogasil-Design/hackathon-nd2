@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;400;600;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -341,8 +342,8 @@ template {
   display: none;
 }
 
-h1 {
-  font-size: 48px;
+button {
+  margin: 0;
 }
 
 html {
@@ -350,12 +351,30 @@ html {
   color: #fff;
 }
 
-.section-init {
-  margin: 0;
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.text-body {
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section {
+  padding: 40px;
+}
+
+.section.start h1 {
+  font-size: 72px;
   color: #ffffff;
-  font-size: 12px;
+  font-family: "Encode Sans";
+  text-transform: uppercase;
+}
+
+.section.start h1 .wk {
+  font-weight: 100;
 }
 /*# sourceMappingURL=styles.css.map */

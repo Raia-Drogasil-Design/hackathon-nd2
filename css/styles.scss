@@ -1,5 +1,15 @@
+//Base
 @import './base/reset';
+
+//Utils
 @import './utils/variables';
+
+//Components
+@import './components/buttons';
+@import './components/texts';
+
+//Layout
 @import './layout/header';
 
+//Pages
 @import './pages/home';

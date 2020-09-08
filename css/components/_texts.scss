@@ -1,0 +1,22 @@
+@mixin text-extra-large {
+    font-size: 72px;
+    color: $body-text;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    
+    .wk{
+        font-weight: 100;
+    }
+}
+
+@mixin text-large{
+
+}
+
+@mixin text-body{
+
+}
+
+@mixin text-footer{
+    
+}

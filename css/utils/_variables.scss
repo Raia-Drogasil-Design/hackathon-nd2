@@ -1,9 +1,9 @@
+//Fonts ---------------------
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;400;600;700&display=swap');
+
 //Colors ---------------------
 $primary-color: #55F273;
 $body-text: #ffffff; 
 
 //Texts ---------------------
-@mixin text-body{
-    color: $body-text;
-    font-size: 12px;
-};
+$font-heading: 'Encode Sans';

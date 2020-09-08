@@ -3,10 +3,34 @@ html{
     color: #fff;
 }
 
-.section-init{  
-    margin: 0;
+header{
+    display: flex;
+
+    .menu{
+        display: flex;
+    }
 }
 
-.text-body{
-    @include text-body;
+.section{
+    padding: 40px;
+
+    &.start{
+        h1{
+            @include text-extra-large;
+        }
+    }
+
+    &.about{
+    }
+
+    &.rules{
+    }
+
+    &.subscribe{
+    }
+
+}
+
+footer{
+
 }
