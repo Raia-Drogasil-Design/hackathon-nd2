@@ -1,0 +1,9 @@
+//Colors ---------------------
+$primary-color: #55F273;
+$body-text: #ffffff; 
+
+//Texts ---------------------
+@mixin text-body{
+    color: $body-text;
+    font-size: 12px;
+};
