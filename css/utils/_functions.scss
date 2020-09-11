@@ -1,0 +1,25 @@
+@function calc-line-height($font-size) {
+    $line: 0;
+
+    @if ($font-size) == 14px {
+        $line: 115%;
+    }
+
+    @if ($font-size) == 16px {
+        $line: 150%;
+    }
+
+    @if ($font-size) == 18px {
+        $line: 135%;
+    }
+
+    @if ($font-size) == 20px {
+        $line: 120%;
+    }
+
+    @if ($font-size) == 24px {
+        $line: 100%;
+    }
+
+    @return $line;
+}

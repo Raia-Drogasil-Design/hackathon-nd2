@@ -1,22 +1,136 @@
 @mixin text-extra-large {
     font-size: 72px;
-    color: $body-text;
+    color: $color-brand;
     font-family: $font-heading;
     text-transform: uppercase;
-    
-    .wk{
+
+    .wk {
+        color: #fff;
         font-weight: 100;
     }
 }
 
-@mixin text-large{
-
+@mixin text-large {
+    font-family: $font-heading;
+    font-weight: 500;
 }
 
-@mixin text-body{
-
+@mixin text-body {
+    font-family: $font-heading;
+    font-weight: 500;
 }
 
-@mixin text-footer{
-    
+@mixin text-footer {
+    font-family: $font-heading;
+    font-weight: 500;
+}
+
+//------
+
+.glitch {
+    color: $color-brand;
+    font-size: 100px;
+    position: relative;
+    //   width:400px;
+    margin: 0 auto;
+}
+
+@keyframes noise-anim {
+    $steps: 10;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+        }
+    }
+}
+
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: $color-brand;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+    $steps: 10;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+        }
+    }
+}
+
+.glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: $color-brand;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+
+
+
+.glitch-image {
+    color: rgb(255, 255, 255);
+    // font-size: 10px;
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.glitch-image:after {
+    content: url('../../assets/x2B\ \ x2B\ \ x2B\ \ 3.svg');
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 900px, 0);
+    animation: noise-anim-img 2s infinite linear alternate-reverse;
+}
+
+.glitch-image:before {
+    content: url('../../assets/x2B\ \ x2B\ \ x2B\ \ 3.svg');
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 900px, 0);
+    animation: noise-anim-img-2 3s infinite linear alternate-reverse;
+}
+
+
+@keyframes noise-anim-img {
+    $steps: 13;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100) + px, 9999px, random(999) + px, 0);
+        }
+    }
+}
+
+@keyframes noise-anim-img-2 {
+    $steps: 13;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100) + px, 9999px, random(999) + px, 0);
+        }
+    }
 }

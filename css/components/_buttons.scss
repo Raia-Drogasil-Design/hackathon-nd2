@@ -1,3 +1,96 @@
-button{
-    margin: 0;
+.btn {
+    font-family: $font-heading;
+    border: $border-none;
+    font-size: $font-size-medium;
+    padding: 8px 16px;
+    text-transform: $text-transform-uppercase;
+    letter-spacing: $letter-spacing-default;
+    line-height: calc-line-height($font-size-medium);
+    font-weight: $font-weight-medium;
+
+    &.primary {
+        background-color: $color-brand;
+        color: $color-neutral-dark;
+
+        &:hover {
+
+            cursor: pointer;
+            background-color: $color-brand;
+
+            &:after {
+                content: attr(data-text);
+                position: absolute;
+                left: 44px;
+                text-shadow: -1px 0 red;
+                padding: 8px 16px;
+                margin-top: -12px;
+                color: $color-neutral-dark;
+                background: $color-brand;
+                overflow: hidden;
+                clip: rect(0, 900px, 0, 0);
+                animation: noise-anim 2s infinite linear alternate-reverse;
+            }
+
+            &:before {
+                content: attr(data-text);
+                position: absolute;
+                // left: -2px;
+                margin-top: -6px;
+                left: 37px;
+                text-shadow: 1px 0 blue;
+                padding: 8px 16px;
+                color: $color-neutral-dark;
+                background: $color-brand;
+                overflow: hidden;
+                clip: rect(0, 900px, 0, 0);
+                animation: noise-anim-2 3s infinite linear alternate-reverse;
+            }
+        }
+    }
+
+    &.secondary {
+
+    }
+
+    &.ghost {
+        border: 1px solid $color-neutral-white;
+        background-color: $color-transparent;
+        color: $color-neutral-white;
+
+        &:hover {
+
+            cursor: pointer;
+            background-color: $color-transparent;
+
+            &:after {
+                content: attr(data-text);
+                // background-color: $color-transparent;
+                position: absolute;
+                left: 41px;
+                text-shadow: -1px 0 red;
+                padding: 8px 16px;
+                margin-top: -11px;
+                color: $color-neutral-white;
+                border: 1px solid $color-neutral-white;
+                overflow: hidden;
+                clip: rect(0, 900px, 0, 0);
+                animation: noise-anim 2s infinite linear alternate-reverse;
+            }
+
+            &:before {
+                content: attr(data-text);
+                // background-color: $color-transparent;
+                position: absolute;
+                margin-top: -9px;
+                left: 39px;
+                text-shadow: 1px 0 blue;
+                padding: 8px 16px;
+                color: $color-neutral-white;
+                border: 1px solid $color-neutral-white;
+                overflow: hidden;
+                clip: rect(0, 900px, 0, 0);
+                animation: noise-anim-2 3s infinite linear alternate-reverse;
+            }
+        }
+    }
 }

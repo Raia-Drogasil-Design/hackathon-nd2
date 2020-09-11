@@ -1,9 +1,49 @@
-//Fonts ---------------------
+//Fonts Familys
+// *************************************
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;400;600;700&display=swap');
 
-//Colors ---------------------
-$primary-color: #55F273;
-$body-text: #ffffff; 
+//Colors 
+// *************************************
+$color-brand: #55F273;
+$color-brand-dark: #34aa4a;
+$color-neutral-white: #ffffff; 
+$color-neutral-dark: #333333;
+$color-neutral-darkest: #000000;
+$color-transparent: rgba(255, 255, 255, 0);
 
-//Texts ---------------------
+//Fonts Familys 
+// *************************************
 $font-heading: 'Encode Sans';
+
+//Fonts Sizes 
+// *************************************
+$font-size-small: 14px; 
+$font-size-normal: 16px; 
+$font-size-medium: 18px; 
+$font-size-large: 20px; 
+$font-size-x-large: 24px;
+
+//Fonts Weights 
+// *************************************
+$font-weight-light: 100;
+$font-weight-normal: 500;
+$font-weight-medium: 600;
+$font-weight-bold: 800;
+
+//Letter Case / Text Transform 
+// *************************************
+$text-transform-uppercase: uppercase;
+$text-transform-none: none;
+
+//Letter Spacing
+// *************************************
+$letter-spacing-none: 0;
+$letter-spacing-default: 3px;
+
+//Bordes
+// *************************************
+$border-none: 0;
+
+
+//Paddings
+// *************************************

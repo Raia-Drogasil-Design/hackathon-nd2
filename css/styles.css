@@ -342,8 +342,482 @@ template {
   display: none;
 }
 
-button {
-  margin: 0;
+.btn {
+  font-family: "Encode Sans";
+  border: 0;
+  font-size: 18px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 135%;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background-color: #55F273;
+  color: #333333;
+}
+
+.btn.primary:hover {
+  cursor: pointer;
+  background-color: #55F273;
+}
+
+.btn.primary:hover:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 44px;
+  text-shadow: -1px 0 red;
+  padding: 8px 16px;
+  margin-top: -12px;
+  color: #333333;
+  background: #55F273;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.btn.primary:hover:before {
+  content: attr(data-text);
+  position: absolute;
+  margin-top: -6px;
+  left: 37px;
+  text-shadow: 1px 0 blue;
+  padding: 8px 16px;
+  color: #333333;
+  background: #55F273;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.btn.ghost {
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+}
+
+.btn.ghost:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn.ghost:hover:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 41px;
+  text-shadow: -1px 0 red;
+  padding: 8px 16px;
+  margin-top: -11px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.btn.ghost:hover:before {
+  content: attr(data-text);
+  position: absolute;
+  margin-top: -9px;
+  left: 39px;
+  text-shadow: 1px 0 blue;
+  padding: 8px 16px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch {
+  color: #55F273;
+  font-size: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(15px, 9999px, 12px, 0);
+  }
+  10% {
+    clip: rect(46px, 9999px, 8px, 0);
+  }
+  20% {
+    clip: rect(65px, 9999px, 75px, 0);
+  }
+  30% {
+    clip: rect(64px, 9999px, 30px, 0);
+  }
+  40% {
+    clip: rect(11px, 9999px, 29px, 0);
+  }
+  50% {
+    clip: rect(55px, 9999px, 28px, 0);
+  }
+  60% {
+    clip: rect(8px, 9999px, 82px, 0);
+  }
+  70% {
+    clip: rect(50px, 9999px, 59px, 0);
+  }
+  80% {
+    clip: rect(17px, 9999px, 92px, 0);
+  }
+  90% {
+    clip: rect(40px, 9999px, 91px, 0);
+  }
+  100% {
+    clip: rect(60px, 9999px, 45px, 0);
+  }
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(15px, 9999px, 12px, 0);
+  }
+  10% {
+    clip: rect(46px, 9999px, 8px, 0);
+  }
+  20% {
+    clip: rect(65px, 9999px, 75px, 0);
+  }
+  30% {
+    clip: rect(64px, 9999px, 30px, 0);
+  }
+  40% {
+    clip: rect(11px, 9999px, 29px, 0);
+  }
+  50% {
+    clip: rect(55px, 9999px, 28px, 0);
+  }
+  60% {
+    clip: rect(8px, 9999px, 82px, 0);
+  }
+  70% {
+    clip: rect(50px, 9999px, 59px, 0);
+  }
+  80% {
+    clip: rect(17px, 9999px, 92px, 0);
+  }
+  90% {
+    clip: rect(40px, 9999px, 91px, 0);
+  }
+  100% {
+    clip: rect(60px, 9999px, 45px, 0);
+  }
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: #55F273;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(48px, 9999px, 15px, 0);
+  }
+  10% {
+    clip: rect(66px, 9999px, 79px, 0);
+  }
+  20% {
+    clip: rect(37px, 9999px, 10px, 0);
+  }
+  30% {
+    clip: rect(53px, 9999px, 93px, 0);
+  }
+  40% {
+    clip: rect(17px, 9999px, 46px, 0);
+  }
+  50% {
+    clip: rect(13px, 9999px, 14px, 0);
+  }
+  60% {
+    clip: rect(27px, 9999px, 96px, 0);
+  }
+  70% {
+    clip: rect(4px, 9999px, 45px, 0);
+  }
+  80% {
+    clip: rect(85px, 9999px, 57px, 0);
+  }
+  90% {
+    clip: rect(97px, 9999px, 72px, 0);
+  }
+  100% {
+    clip: rect(90px, 9999px, 49px, 0);
+  }
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(48px, 9999px, 15px, 0);
+  }
+  10% {
+    clip: rect(66px, 9999px, 79px, 0);
+  }
+  20% {
+    clip: rect(37px, 9999px, 10px, 0);
+  }
+  30% {
+    clip: rect(53px, 9999px, 93px, 0);
+  }
+  40% {
+    clip: rect(17px, 9999px, 46px, 0);
+  }
+  50% {
+    clip: rect(13px, 9999px, 14px, 0);
+  }
+  60% {
+    clip: rect(27px, 9999px, 96px, 0);
+  }
+  70% {
+    clip: rect(4px, 9999px, 45px, 0);
+  }
+  80% {
+    clip: rect(85px, 9999px, 57px, 0);
+  }
+  90% {
+    clip: rect(97px, 9999px, 72px, 0);
+  }
+  100% {
+    clip: rect(90px, 9999px, 49px, 0);
+  }
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: #55F273;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch-image {
+  color: white;
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.glitch-image:after {
+  content: url("../../assets/x2B  x2B  x2B  3.svg");
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 900px, 0);
+  animation: noise-anim-img 2s infinite linear alternate-reverse;
+}
+
+.glitch-image:before {
+  content: url("../../assets/x2B  x2B  x2B  3.svg");
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 900px, 0);
+  animation: noise-anim-img-2 3s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-img {
+  0% {
+    clip: rect(29px, 9999px, 287px, 0);
+  }
+  7.69231% {
+    clip: rect(68px, 9999px, 735px, 0);
+  }
+  15.38462% {
+    clip: rect(29px, 9999px, 246px, 0);
+  }
+  23.07692% {
+    clip: rect(50px, 9999px, 326px, 0);
+  }
+  30.76923% {
+    clip: rect(34px, 9999px, 766px, 0);
+  }
+  38.46154% {
+    clip: rect(28px, 9999px, 851px, 0);
+  }
+  46.15385% {
+    clip: rect(18px, 9999px, 86px, 0);
+  }
+  53.84615% {
+    clip: rect(2px, 9999px, 181px, 0);
+  }
+  61.53846% {
+    clip: rect(45px, 9999px, 990px, 0);
+  }
+  69.23077% {
+    clip: rect(73px, 9999px, 945px, 0);
+  }
+  76.92308% {
+    clip: rect(40px, 9999px, 63px, 0);
+  }
+  84.61538% {
+    clip: rect(66px, 9999px, 449px, 0);
+  }
+  92.30769% {
+    clip: rect(16px, 9999px, 923px, 0);
+  }
+  100% {
+    clip: rect(45px, 9999px, 254px, 0);
+  }
+}
+
+@keyframes noise-anim-img {
+  0% {
+    clip: rect(29px, 9999px, 287px, 0);
+  }
+  7.69231% {
+    clip: rect(68px, 9999px, 735px, 0);
+  }
+  15.38462% {
+    clip: rect(29px, 9999px, 246px, 0);
+  }
+  23.07692% {
+    clip: rect(50px, 9999px, 326px, 0);
+  }
+  30.76923% {
+    clip: rect(34px, 9999px, 766px, 0);
+  }
+  38.46154% {
+    clip: rect(28px, 9999px, 851px, 0);
+  }
+  46.15385% {
+    clip: rect(18px, 9999px, 86px, 0);
+  }
+  53.84615% {
+    clip: rect(2px, 9999px, 181px, 0);
+  }
+  61.53846% {
+    clip: rect(45px, 9999px, 990px, 0);
+  }
+  69.23077% {
+    clip: rect(73px, 9999px, 945px, 0);
+  }
+  76.92308% {
+    clip: rect(40px, 9999px, 63px, 0);
+  }
+  84.61538% {
+    clip: rect(66px, 9999px, 449px, 0);
+  }
+  92.30769% {
+    clip: rect(16px, 9999px, 923px, 0);
+  }
+  100% {
+    clip: rect(45px, 9999px, 254px, 0);
+  }
+}
+
+@-webkit-keyframes noise-anim-img-2 {
+  0% {
+    clip: rect(76px, 9999px, 733px, 0);
+  }
+  7.69231% {
+    clip: rect(15px, 9999px, 572px, 0);
+  }
+  15.38462% {
+    clip: rect(96px, 9999px, 264px, 0);
+  }
+  23.07692% {
+    clip: rect(77px, 9999px, 155px, 0);
+  }
+  30.76923% {
+    clip: rect(29px, 9999px, 185px, 0);
+  }
+  38.46154% {
+    clip: rect(80px, 9999px, 761px, 0);
+  }
+  46.15385% {
+    clip: rect(39px, 9999px, 869px, 0);
+  }
+  53.84615% {
+    clip: rect(83px, 9999px, 371px, 0);
+  }
+  61.53846% {
+    clip: rect(68px, 9999px, 601px, 0);
+  }
+  69.23077% {
+    clip: rect(47px, 9999px, 687px, 0);
+  }
+  76.92308% {
+    clip: rect(15px, 9999px, 325px, 0);
+  }
+  84.61538% {
+    clip: rect(41px, 9999px, 302px, 0);
+  }
+  92.30769% {
+    clip: rect(32px, 9999px, 450px, 0);
+  }
+  100% {
+    clip: rect(77px, 9999px, 713px, 0);
+  }
+}
+
+@keyframes noise-anim-img-2 {
+  0% {
+    clip: rect(76px, 9999px, 733px, 0);
+  }
+  7.69231% {
+    clip: rect(15px, 9999px, 572px, 0);
+  }
+  15.38462% {
+    clip: rect(96px, 9999px, 264px, 0);
+  }
+  23.07692% {
+    clip: rect(77px, 9999px, 155px, 0);
+  }
+  30.76923% {
+    clip: rect(29px, 9999px, 185px, 0);
+  }
+  38.46154% {
+    clip: rect(80px, 9999px, 761px, 0);
+  }
+  46.15385% {
+    clip: rect(39px, 9999px, 869px, 0);
+  }
+  53.84615% {
+    clip: rect(83px, 9999px, 371px, 0);
+  }
+  61.53846% {
+    clip: rect(68px, 9999px, 601px, 0);
+  }
+  69.23077% {
+    clip: rect(47px, 9999px, 687px, 0);
+  }
+  76.92308% {
+    clip: rect(15px, 9999px, 325px, 0);
+  }
+  84.61538% {
+    clip: rect(41px, 9999px, 302px, 0);
+  }
+  92.30769% {
+    clip: rect(32px, 9999px, 450px, 0);
+  }
+  100% {
+    clip: rect(77px, 9999px, 713px, 0);
+  }
 }
 
 html {
@@ -369,12 +843,19 @@ header .menu {
 
 .section.start h1 {
   font-size: 72px;
-  color: #ffffff;
+  color: #55F273;
   font-family: "Encode Sans";
   text-transform: uppercase;
 }
 
 .section.start h1 .wk {
+  color: #fff;
   font-weight: 100;
+}
+
+footer {
+  padding: 40px;
+  font-family: "Encode Sans";
+  font-weight: 500;
 }
 /*# sourceMappingURL=styles.css.map */
